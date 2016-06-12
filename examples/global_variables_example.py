@@ -9,9 +9,7 @@ def function():
 
 VALUE = 0
 function()
-print(VALUE)
 ex = 1
-print(ex)
 
 
 def function1():
@@ -32,4 +30,4 @@ def function1():
     function2()
 
     # Local variable reflects nonlocal change.
-    print(value)
+    return value
