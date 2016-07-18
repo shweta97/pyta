@@ -37,6 +37,10 @@ class PlainReporter(BaseReporter):
             if len(messages) > 0:
                 msg_new = self._messages[i].msg + '\n    ' + '\n    '.join(messages)
 
-            obj_new = 'This error occurs at ' + str(count) + ' places:'
+            if count == 1:
+                obj_new = 'This error occurs at 1 place:'
+            else:
+                obj_new = 'This error occurs at ' + str(count) + ' places:'
+
             self._messages[i] = self._messages[i]._replace(msg=msg_new, obj=obj_new)
             i += 1
